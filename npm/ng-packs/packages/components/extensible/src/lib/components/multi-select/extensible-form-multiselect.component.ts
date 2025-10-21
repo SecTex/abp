@@ -23,7 +23,7 @@ const EXTENSIBLE_FORM_MULTI_SELECT_CONTROL_VALUE_ACCESSOR = {
             [id]="'checkbox_' + option.value"
             [disabled]="disabled"
             [checked]="isChecked(option.value)"
-            (change)="onCheckboxChange(option.value, $event.target.checked)"
+            (change)="onCheckboxChange(option.value, $event.target['checked'])"
           />
           <label [for]="'checkbox_' + option.value">
             @if (prop().isExtra) {

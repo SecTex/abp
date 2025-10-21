@@ -1,4 +1,4 @@
-export const enum eAccountRouteNames {
+export enum eAccountRouteNames {
   Account = 'AbpAccount::Menu:Account',
   Login = 'AbpAccount::Login',
   Register = 'AbpAccount::Register',

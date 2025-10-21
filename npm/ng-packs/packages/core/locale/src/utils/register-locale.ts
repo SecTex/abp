@@ -56,7 +56,7 @@ export function registerLocaleForEsBuild(
       const localeSupportList = "ar|cs|en|en-GB|es|de|fi|fr|hi|hu|is|it|pt|tr|ru|ro|sk|sl|zh-Hans|zh-Hant".split("|");
 
       if (localeSupportList.indexOf(l) == -1) {
-          return;
+          return undefined;
       }
       return new Promise((resolve, reject) => {
           return loadLocale(l)

@@ -7,6 +7,8 @@
     "url": "https://github.com/abpframework/abp.git"
   },
   "dependencies": {
+    "angular-oauth2-oidc": "^20.0.0",
+    "@ngx-validate/core": "^0.2.0",
     "@abp/utils": "~9.3.5",
     "just-clone": "^6.0.0",
     "just-compare": "^2.0.0",

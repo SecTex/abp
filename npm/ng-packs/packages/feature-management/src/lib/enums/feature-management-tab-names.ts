@@ -1,3 +1,3 @@
-export const enum eFeatureManagementTabNames {
+export enum eFeatureManagementTabNames {
   FeatureManagement = 'AbpFeatureManagement::Permission:FeatureManagement',
 }

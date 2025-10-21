@@ -96,6 +96,8 @@ export class PersonalSettingsComponent
         if (isLogOutConfirmMessageVisible) {
           this.showLogoutConfirmMessage();
         }
+
+        return Promise.resolve();
       });
   }
 

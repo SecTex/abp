@@ -76,8 +76,8 @@ export class AuthCodeFlowStrategy extends AuthFlowStrategy {
 
   navigateToLogin(queryParams?: Params) {
     let additionalState = '';
-    if (queryParams?.returnUrl) {
-      additionalState = queryParams.returnUrl;
+    if (queryParams?.['returnUrl']) {
+      additionalState = queryParams['returnUrl'];
     }
 
     const cultureParams = this.getCultureParams(queryParams);
@@ -91,7 +91,7 @@ export class AuthCodeFlowStrategy extends AuthFlowStrategy {
 
   logout(queryParams?: Params) {
     this.rememberMeService.remove();
-    if (queryParams?.noRedirectToLogoutUrl) {
+    if (queryParams?.['noRedirectToLogoutUrl']) {
       this.router.navigate(['/']);
       return from(this.oAuthService.revokeTokenAndLogout(true));
     }

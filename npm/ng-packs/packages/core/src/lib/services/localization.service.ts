@@ -79,7 +79,7 @@ export class LocalizationService {
       .pipe(
         map(([legacy, resource, local]) => {
           if (!resource) {
-            return;
+            return undefined;
           }
           const remote = combineLegacyandNewResources(legacy || {}, resource);
           if (remote) {

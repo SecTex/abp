@@ -1,3 +1,3 @@
-export const enum eMyProjectNameRouteNames {
+export enum eMyProjectNameRouteNames {
   MyProjectName = 'MyProjectName',
 }

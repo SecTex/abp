@@ -1,3 +1,3 @@
-export const enum eCmsKitRouteNames {
+export enum eCmsKitRouteNames {
   CmsKit = 'CmsKit',
 }

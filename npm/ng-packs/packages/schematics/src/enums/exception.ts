@@ -1,4 +1,4 @@
-export const enum Exception {
+export enum Exception {
   DirRemoveFailed = '[Directory Remove Failed] Cannot remove "{0}".',
   FileNotFound = '[File Not Found] There is no file at "{0}" path.',
   FileWriteFailed = '[File Write Failed] Cannot write file at "{0}".',

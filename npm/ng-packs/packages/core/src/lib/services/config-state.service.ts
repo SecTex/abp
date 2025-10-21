@@ -148,14 +148,14 @@ export class ConfigStateService {
 
   getFeatures(keys: string[]) {
     const { features } = this.store.state;
-    if (!features) return;
+    if (!features) return undefined;
 
     return keys.reduce((acc, key) => ({ ...acc, [key]: features.values[key] }), {});
   }
 
   getFeatures$(keys: string[]): Observable<{ [key: string]: string } | undefined> {
     return this.store.sliceState(({ features }) => {
-      if (!features?.values) return;
+      if (!features?.values) return undefined;
 
       return keys.reduce((acc, key) => ({ ...acc, [key]: features.values[key] }), {});
     });

@@ -1,3 +1,3 @@
-export const enum eSettingManagementRouteNames {
+export enum eSettingManagementRouteNames {
   Settings = 'AbpSettingManagement::Settings',
 }

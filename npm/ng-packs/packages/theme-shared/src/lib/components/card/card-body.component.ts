@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
 })
 export class CardBodyComponent {
-  @HostBinding('class') componentClass = 'card-body';
-  @Input() cardBodyClass: string;
-  @Input() cardBodyStyle: string;
+  @HostBinding('class') public componentClass = 'card-body';
+  @Input() public cardBodyClass: string | string[] | Set<string> | { [klass: string]: any };
+  @Input() public cardBodyStyle: { [key: string]: any } | null;
 }

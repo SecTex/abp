@@ -44,8 +44,8 @@ export class IdentityExtensionsGuard implements IAbpGuard {
 
     return getObjectExtensionEntitiesFromStore(this.injector, 'Identity').pipe(
       map(entities => ({
-        [eIdentityComponents.Roles]: entities.Role,
-        [eIdentityComponents.Users]: entities.User,
+        [eIdentityComponents.Roles]: entities['Role'],
+        [eIdentityComponents.Users]: entities['User'],
       })),
       mapEntitiesToContributors(this.injector, 'AbpIdentity'),
       tap(objectExtensionContributors => {

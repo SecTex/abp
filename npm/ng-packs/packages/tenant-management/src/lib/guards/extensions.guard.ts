@@ -46,7 +46,7 @@ export class TenantManagementExtensionsGuard implements IAbpGuard {
 
     return getObjectExtensionEntitiesFromStore(this.injector, 'TenantManagement').pipe(
       map(entities => ({
-        [eTenantManagementComponents.Tenants]: entities.Tenant,
+        [eTenantManagementComponents.Tenants]: entities['Tenant'],
       })),
       mapEntitiesToContributors(this.injector, 'TenantManagement'),
       tap(objectExtensionContributors => {

@@ -1,3 +1,3 @@
-export const enum eSettingManamagementSettingTabNames {
+export enum eSettingManamagementSettingTabNames {
   EmailSettingGroup = 'AbpSettingManagement::Menu:Emailing',
 }

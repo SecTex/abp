@@ -1,4 +1,4 @@
-export const enum eAccountComponents {
+export enum eAccountComponents {
   Login = 'Account.LoginComponent',
   Register = 'Account.RegisterComponent',
   ForgotPassword = 'Account.ForgotPasswordComponent',

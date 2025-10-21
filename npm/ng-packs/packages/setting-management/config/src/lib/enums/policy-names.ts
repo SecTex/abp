@@ -1,3 +1,3 @@
-export const enum SettingManagementPolicyNames {
+export enum SettingManagementPolicyNames {
   Emailing = 'SettingManagement.Emailing',
 }

@@ -1,3 +1,3 @@
-export const enum eThemeSharedRouteNames {
+export enum eThemeSharedRouteNames {
   Administration = 'AbpUiNavigation::Menu:Administration',
 }

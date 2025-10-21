@@ -37,7 +37,7 @@ export const tenantManagementExtensionsResolver: ResolveFn<any> = () => {
 
   return getObjectExtensionEntitiesFromStore(injector, 'TenantManagement').pipe(
     map(entities => ({
-      [eTenantManagementComponents.Tenants]: entities.Tenant,
+      [eTenantManagementComponents.Tenants]: entities['Tenant'],
     })),
     mapEntitiesToContributors(injector, 'TenantManagement'),
     tap(objectExtensionContributors => {

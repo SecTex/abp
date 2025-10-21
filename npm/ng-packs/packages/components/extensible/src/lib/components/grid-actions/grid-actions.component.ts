@@ -37,7 +37,7 @@ import { NgClass, NgTemplateOutlet } from '@angular/common';
 export class GridActionsComponent<R = any> extends AbstractActionsComponent<EntityActionList<R>> {
   @Input() icon = 'fa fa-cog';
 
-  @Input() readonly index?: number;
+  @Input() index?: number;
 
   @Input() text = '';
 

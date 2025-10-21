@@ -30,7 +30,7 @@ export class AccountExtensionsGuard implements IAbpGuard {
 
     return getObjectExtensionEntitiesFromStore(this.injector, 'Identity').pipe(
       map(entities => ({
-        [eAccountComponents.PersonalSettings]: entities.User,
+        [eAccountComponents.PersonalSettings]: entities['User'],
       })),
       mapEntitiesToContributors(this.injector, 'AbpIdentity'),
       tap(objectExtensionContributors => {

@@ -99,7 +99,7 @@
                       [attr.id]="permission.name"
                       class="form-check-input"
                       [disabled]="isGrantedByOtherProviderName(permission.grantedProviders)"
-                      (click)="onClickCheckbox(permission, permissionCheckbox.value)"
+                      (click)="onClickCheckbox(permission)"
                     />
                     <label class="form-check-label" [attr.for]="permission.name"
                       >{{ permission.displayName }}

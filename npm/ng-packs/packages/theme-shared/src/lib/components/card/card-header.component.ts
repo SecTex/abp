@@ -13,6 +13,6 @@ import { CommonModule } from '@angular/common';
 })
 export class CardHeaderComponent {
   @HostBinding('class') componentClass = 'card-header';
-  @Input() cardHeaderClass: string;
-  @Input() cardHeaderStyle: string;
+  @Input() cardHeaderClass: string | string[] | Set<string> | { [klass: string]: any } | null = null;
+  @Input() cardHeaderStyle: { [klass: string]: any } | null = null;
 }

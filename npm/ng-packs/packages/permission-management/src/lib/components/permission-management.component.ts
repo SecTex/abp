@@ -34,7 +34,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 type PermissionWithStyle = PermissionGrantInfoDto & {
-  style: string;
+  style: { [klass: string]: any; } | null;
 };
 
 type PermissionWithGroupName = PermissionGrantInfoDto & {

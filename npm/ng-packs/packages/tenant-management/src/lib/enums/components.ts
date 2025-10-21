@@ -1,3 +1,3 @@
-export const enum eTenantManagementComponents {
+export enum eTenantManagementComponents {
   Tenants = 'TenantManagement.TenantsComponent',
 }

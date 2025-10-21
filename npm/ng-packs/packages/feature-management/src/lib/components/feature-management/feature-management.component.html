@@ -27,7 +27,7 @@
                     <h4>{{ selectedGroupDisplayName }}</h4>
                     <hr class="mt-2 mb-3" />
 
-                    @for (feature of features[group.name]; track feature.id || i; let i = $index) {
+                    @for (feature of features[group.name]; track feature['id'] || i; let i = $index) {
                       @let provider = feature.provider.name;
                       @let isFeatureDisabled = !feature.parentName ? isParentDisabled(feature.name, group.name, provider) :
                         (provider !== providerName && provider !== defaultProviderName);
@@ -85,7 +85,7 @@
                             </div>
                           }
                           @case (valueTypes.SelectionStringValueType) {
-                            @if (feature.valueType.itemSource?.items?.length) {
+                            @if (feature.valueType['itemSource']?.items?.length) {
                               <div class="mb-3 form-group" [class.px-2]="!!feature.parentName">
                                 <label [htmlFor]="feature.name" class="form-label">
                                   {{ feature.displayName }}
@@ -100,7 +100,7 @@
                                   [disabled]="isFeatureDisabled"
                                 >
                                   @for (
-                                    item of feature.valueType.itemSource?.items;
+                                    item of feature.valueType['itemSource']?.items;
                                     track item.value
                                   ) {
                                     <option [ngValue]="item.value">

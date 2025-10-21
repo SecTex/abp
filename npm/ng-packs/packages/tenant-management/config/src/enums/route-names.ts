@@ -1,4 +1,4 @@
-export const enum eTenantManagementRouteNames {
+export enum eTenantManagementRouteNames {
   TenantManagement = 'AbpTenantManagement::Menu:TenantManagement',
   Tenants = 'AbpTenantManagement::Tenants',
 }

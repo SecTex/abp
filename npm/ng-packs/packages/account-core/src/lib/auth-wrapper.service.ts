@@ -18,7 +18,7 @@ export class AuthWrapperService {
   route: ActivatedRoute;
 
   get isTenantBoxVisibleForCurrentRoute() {
-    return this.getMostInnerChild().data.tenantBoxVisible ?? true;
+    return this.getMostInnerChild().data['tenantBoxVisible'] ?? true;
   }
 
   get isTenantBoxVisible() {

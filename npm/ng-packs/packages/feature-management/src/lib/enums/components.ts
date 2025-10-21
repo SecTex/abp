@@ -1,3 +1,3 @@
-export const enum eFeatureManagementComponents {
+export enum eFeatureManagementComponents {
   FeatureManagement = 'FeatureManagement.FeatureManagementComponent',
 }

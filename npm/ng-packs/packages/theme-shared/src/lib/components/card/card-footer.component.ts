@@ -13,6 +13,11 @@ import { CommonModule } from '@angular/common';
 })
 export class CardFooterComponent {
   @HostBinding('class') componentClass = 'card-footer';
-  @Input() cardFooterStyle: string;
-  @Input() cardFooterClass: string;
+  @Input() cardFooterStyle: { [klass: string]: any } | null = null;
+  @Input() cardFooterClass:
+    | string
+    | string[]
+    | Set<string>
+    | { [klass: string]: any }
+    | null = null;
 }

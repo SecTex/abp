@@ -20,7 +20,7 @@ export const accountExtensionsResolver: ResolveFn<any> = () => {
 
   return getObjectExtensionEntitiesFromStore(injector, 'Identity').pipe(
     map(entities => ({
-      [eAccountComponents.PersonalSettings]: entities.User,
+      [eAccountComponents.PersonalSettings]: entities['User'],
     })),
     mapEntitiesToContributors(injector, 'AbpIdentity'),
     tap(objectExtensionContributors => {

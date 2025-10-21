@@ -1,5 +1,5 @@
 @if (form) {
-  <form [formGroup]="form" (ngSubmit)="submit()" validateOnSubmit class="abp-md-form">
+  <form [formGroup]="form" (ngSubmit)="submit()" [validateOnSubmit]="true" class="abp-md-form">
     <abp-extensible-form [selectedRecord]="selected"></abp-extensible-form>
   
     <abp-button

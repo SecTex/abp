@@ -56,13 +56,13 @@ export class ButtonComponent implements OnInit {
   @Input()
   attributes?: ABP.Dictionary<string>;
 
-  @Output() readonly click = new EventEmitter<MouseEvent>();
+  @Output() readonly click = new EventEmitter<Event>();
 
   @Output() readonly focus = new EventEmitter<FocusEvent>();
 
   @Output() readonly blur = new EventEmitter<FocusEvent>();
 
-  @Output() readonly abpClick = new EventEmitter<MouseEvent>();
+  @Output() readonly abpClick = new EventEmitter<Event>();
 
   @Output() readonly abpFocus = new EventEmitter<FocusEvent>();
 

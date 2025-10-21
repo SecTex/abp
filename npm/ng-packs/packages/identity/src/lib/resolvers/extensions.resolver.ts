@@ -36,8 +36,8 @@ export const identityExtensionsResolver: ResolveFn<any> = () => {
   const injector = inject(Injector);
   return getObjectExtensionEntitiesFromStore(injector, 'Identity').pipe(
     map(entities => ({
-      [eIdentityComponents.Roles]: entities.Role,
-      [eIdentityComponents.Users]: entities.User,
+      [eIdentityComponents.Roles]: entities['Role'],
+      [eIdentityComponents.Users]: entities['User'],
     })),
     mapEntitiesToContributors(injector, 'AbpIdentity'),
     tap(objectExtensionContributors => {

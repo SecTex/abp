@@ -1,3 +1,3 @@
-export const enum eSettingManagementComponents {
+export enum eSettingManagementComponents {
   SettingManagement = 'SettingManagement.SettingManagementComponent',
 }

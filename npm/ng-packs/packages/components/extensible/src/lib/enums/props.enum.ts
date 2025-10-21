@@ -1,4 +1,4 @@
-export const enum ePropType {
+export enum ePropType {
   Boolean = 'boolean',
   Date = 'date',
   DateTime = 'datetime',

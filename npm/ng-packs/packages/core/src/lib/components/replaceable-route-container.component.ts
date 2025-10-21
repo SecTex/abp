@@ -28,9 +28,9 @@ export class ReplaceableRouteContainerComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.defaultComponent = this.route.snapshot.data.replaceableComponent.defaultComponent;
+    this.defaultComponent = this.route.snapshot.data['replaceableComponent'].defaultComponent;
     this.componentKey = (
-      this.route.snapshot.data.replaceableComponent as ReplaceableComponents.RouteData
+      this.route.snapshot.data['replaceableComponent'] as ReplaceableComponents.RouteData
     ).key;
 
     const component$ = this.replaceableComponents

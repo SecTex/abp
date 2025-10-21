@@ -66,7 +66,7 @@ export class TreeComponent implements OnInit {
   @Output() readonly checkedKeysChange = new EventEmitter();
   @Output() readonly expandedKeysChange = new EventEmitter<string[]>();
   @Output() readonly selectedNodeChange = new EventEmitter();
-  @Output() readonly dropOver = new EventEmitter<DropEvent>();
+  @Output() readonly dropOver = new EventEmitter<NzFormatEmitEvent>();
   @Output() readonly nzExpandChange = new EventEmitter<NzFormatEmitEvent>();
   @Input() noAnimation = true;
   @Input() draggable: boolean;
@@ -113,7 +113,7 @@ export class TreeComponent implements OnInit {
   }
 
   onSelectedNodeChange(node: NzTreeNode) {
-    this.selectedNode = node.origin.entity;
+    this.selectedNode = node.origin['entity'];
     if (this.changeCheckboxWithNode) {
       let newVal;
       if (node.isChecked) {
@@ -125,7 +125,7 @@ export class TreeComponent implements OnInit {
       this.checkedKeys = newVal;
       this.checkedKeysChange.emit(newVal);
     } else {
-      this.selectedNodeChange.emit(node.origin.entity);
+      this.selectedNodeChange.emit(node.origin['entity']);
     }
   }
 
@@ -140,10 +140,10 @@ export class TreeComponent implements OnInit {
     this.nzExpandChange.emit(event);
   }
 
-  onDrop(event: DropEvent) {
+  onDrop(event: NzFormatEmitEvent) {
     event.event.stopPropagation();
     event.event.preventDefault();
-    event.pos = this.dropPosition;
+    //event.pos = this.dropPosition;
 
     this.dropOver.emit(event);
   }

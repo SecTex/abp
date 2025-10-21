@@ -9,13 +9,13 @@ export namespace Rest {
     httpParamEncoder?: HttpParameterCodec;
   }>;
 
-  export const enum Observe {
+  export enum Observe {
     Body = 'body',
     Events = 'events',
     Response = 'response',
   }
 
-  export const enum ResponseType {
+  export enum ResponseType {
     ArrayBuffer = 'arraybuffer',
     Blob = 'blob',
     JSON = 'json',

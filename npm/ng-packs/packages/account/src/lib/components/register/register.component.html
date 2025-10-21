@@ -9,7 +9,7 @@
   <form
     [formGroup]="form"
     (ngSubmit)="onSubmit()"
-    validateOnSubmit
+    [validateOnSubmit]="true"
     class="mt-4"
   >
     <div class="mb-3 form-group">

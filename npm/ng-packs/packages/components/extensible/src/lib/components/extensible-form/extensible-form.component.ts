@@ -62,7 +62,7 @@ export class ExtensibleFormComponent<R = any> {
   }
 
   get extraProperties(): UntypedFormGroup {
-    return (this.form.controls.extraProperties || { controls: {} }) as UntypedFormGroup;
+    return (this.form.controls['extraProperties'] || { controls: {} }) as UntypedFormGroup;
   }
 
   createGroupedList(propList: FormPropList<R>) {

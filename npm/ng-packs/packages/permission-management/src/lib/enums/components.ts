@@ -1,3 +1,3 @@
-export const enum ePermissionManagementComponents {
+export enum ePermissionManagementComponents {
   PermissionManagement = 'PermissionManagement.PermissionManagementComponent',
 }

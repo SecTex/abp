@@ -1,13 +1,8 @@
+import { FeatureDto } from '@abp/ng.feature-management/proxy';
 import { Directive, HostBinding, Input } from '@angular/core';
 
 // TODO: improve this type
-export interface FreeTextType {
-  valueType: {
-    validator: {
-      name: string;
-    };
-  };
-}
+export type FreeTextType = FeatureDto & { style?: { [key: string]: number; }; initialValue: any; };
 
 export const INPUT_TYPES = {
   numeric: 'number',

@@ -9,54 +9,66 @@ export * from './lib/constants/extra-properties';
 export * from './lib/directives/prop-data.directive';
 export * from './lib/enums/props.enum';
 export * from './lib/enums/components';
-export {
+export type {
   ActionCallback,
-  ActionList,
   ActionPredicate,
   ReadonlyActionData as ActionData,
 } from './lib/models/actions';
 export {
+  ActionList,
+} from './lib/models/actions';
+export {
   EntityAction,
-  EntityActionContributorCallback,
   EntityActionList,
-  EntityActionOptions,
   EntityActions,
   EntityActionsFactory,
 } from './lib/models/entity-actions';
+export type {
+  EntityActionContributorCallback,
+  EntityActionOptions,
+} from './lib/models/entity-actions';
 export {
   EntityProp,
-  EntityPropContributorCallback,
   EntityPropList,
-  EntityPropOptions,
   EntityProps,
   EntityPropsFactory,
 } from './lib/models/entity-props';
+export type {
+  EntityPropContributorCallback,
+  EntityPropOptions,
+} from './lib/models/entity-props';
 export {
-  CreateFormPropContributorCallback,
   CreateFormPropsFactory,
-  EditFormPropContributorCallback,
   EditFormPropsFactory,
   FormProp,
   FormPropData,
   FormPropList,
-  FormPropOptions,
   FormProps,
+} from './lib/models/form-props';
+export type {
+  CreateFormPropContributorCallback,
+  EditFormPropContributorCallback,
+  FormPropOptions,
 } from './lib/models/form-props';
 export * from './lib/models/object-extensions';
 export {
-  PropCallback,
   PropList,
+} from './lib/models/props';
+export type {
+  PropCallback,
   PropPredicate,
   ReadonlyPropData as PropData,
 } from './lib/models/props';
 export {
   ToolbarAction,
-  ToolbarActionContributorCallback,
   ToolbarActionList,
-  ToolbarActionOptions,
   ToolbarActions,
   ToolbarActionsFactory,
   ToolbarComponent,
+} from './lib/models/toolbar-actions';
+export type {
+  ToolbarActionContributorCallback,
+  ToolbarActionOptions,
   ToolbarComponentOptions,
 } from './lib/models/toolbar-actions';
 export * from './lib/pipes/create-injector.pipe';

@@ -1,18 +1,22 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "strict": false,
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2020",
-    "module": "esnext",
-    "lib": ["es2017", "dom"],
     "baseUrl": "./",
-    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "target": "es2022",
+    "module": "ES2022",
+    "sourceMap": true,
+    "emitDecoratorMetadata": false,
     "paths": {
       "@abp/ng.account": ["packages/account/src/public-api.ts"],
       "@abp/ng.account.core": ["packages/account-core/src/public-api.ts"],
@@ -33,9 +37,7 @@
       "@abp/ng.identity/proxy": ["packages/identity/proxy/src/public-api.ts"],
       "@abp/ng.oauth": ["packages/oauth/src/public-api.ts"],
       "@abp/ng.permission-management": ["packages/permission-management/src/public-api.ts"],
-      "@abp/ng.permission-management/proxy": [
-        "packages/permission-management/proxy/src/public-api.ts"
-      ],
+      "@abp/ng.permission-management/proxy": ["packages/permission-management/proxy/src/public-api.ts"],
       "@abp/ng.setting-management": ["packages/setting-management/src/public-api.ts"],
       "@abp/ng.setting-management/config": ["packages/setting-management/config/src/public-api.ts"],
       "@abp/ng.setting-management/proxy": ["packages/setting-management/proxy/src/public-api.ts"],
@@ -48,6 +50,12 @@
       "@abp/ng.theme.shared/testing": ["packages/theme-shared/testing/src/public-api.ts"],
       "@abp/nx.generators": ["packages/generators/src/index.ts"]
     }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   },
   "exclude": ["node_modules", "tmp"]
 }

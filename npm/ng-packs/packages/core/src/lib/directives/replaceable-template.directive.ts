@@ -95,7 +95,7 @@ export class ReplaceableTemplateDirective implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes?.data?.currentValue?.inputs && this.defaultComponentRef) {
+    if (changes?.['data']?.currentValue?.inputs && this.defaultComponentRef) {
       this.setDefaultComponentInputs();
     }
   }

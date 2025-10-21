@@ -11,7 +11,7 @@ export class DomInsertionService {
   ): T | undefined {
     const hash = generateHash(contentStrategy.content);
 
-    if (this.inserted.has(hash)) return;
+    if (this.inserted.has(hash)) return undefined;
 
     const element = contentStrategy.insertElement();
     this.inserted.add(hash);

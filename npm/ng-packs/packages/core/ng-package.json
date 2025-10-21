@@ -5,6 +5,7 @@
     "entryFile": "src/public-api.ts"
   },
   "allowedNonPeerDependencies": [
+    "@ngx-validate/core",
     "@abp/utils",
     "angular-oauth2-oidc",
     "just-compare",

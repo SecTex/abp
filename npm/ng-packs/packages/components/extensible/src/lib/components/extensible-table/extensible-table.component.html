@@ -11,12 +11,12 @@
 @if(selectable) {
   <ngx-datatable-column [width]="50" [sortable]="false" [canAutoResize]="false" [draggable]="false" [resizeable]="false">
   
-    <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected"
+    <ng-template ngx-datatable-header-template let-allRowsSelected="allRowsSelected"
       let-selectFn="selectFn">
       @if (_selectionType !== 'single') {
       <div class="form-check">
         <input class="form-check-input table-check" type="checkbox" [checked]="allRowsSelected"
-          (change)="selectFn(!allRowsSelected)" />
+          (change)="selectFn()" />
       </div>
       }
     </ng-template>
@@ -79,7 +79,7 @@
           {{ column.name }}
         }
       </ng-template>
-      <ng-template let-row="row" let-i="index" ngx-datatable-cell-template>
+      <ng-template let-row="row" ngx-datatable-cell-template>
         <ng-container *abpPermission="prop.permission; runChangeDetection: false">
           <ng-container *abpVisible="row['_' + prop.name]?.visible">
             @if (!row['_' + prop.name].component) {
